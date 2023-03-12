@@ -1,0 +1,560 @@
+/* ==== link to google fonts start here ==== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+/* ==== link to google fonts ends here ==== */
+
+/*==== universal selector starts here ====*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline:none;
+    border:none;
+    transition: all .4s ease;
+    scroll-behavior: smooth;
+}
+/*==== universal selector ends here ====*/
+
+/* ==== variables starts here ==== */
+:root{
+    --background-color:#1f242d;
+    --second-background-color:#323946;
+    --text-color:#ffffff;
+    --main-color:#3ae2df;
+}
+/* ==== variables ends here ==== */
+
+/* ==== global classes starts here ==== */
+::-webkit-scrollbar{
+    width:1.3rem;
+}
+::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: 2rem;
+}
+html{
+    font-family: "poppins", sans-serif;
+    font-size: 62.5%;
+}
+
+body{
+    background:var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 4rem;
+}
+
+span{
+    color:var(--main-color);
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 1.2rem 2.5rem;
+    background: var(--main-color);
+    color:var(--second-background-color);
+    font-size: 1.6rem;
+    font-weight: 700;
+    border-radius: .9rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    transition: .3s ease;
+}
+
+.btn:hover{
+    box-shadow: 0 0 2rem var(--main-color);
+}
+
+.heading{
+    text-align: center;
+    font-size: 3.7rem;
+    font-weight: 600;
+    margin-bottom: .2rem;
+}
+/* ==== global classes ends here ==== */
+
+/*==== header style starts here ====*/
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding: 2rem 9%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    background: var(--background-color);
+}
+
+.header.sticky {
+    box-shadow: 0 0 1rem rgba(0,0,0,.6);
+}
+
+.logo{
+   font-size: 2.5rem;
+   color:white;
+   font-weight: 600;
+   cursor: default;
+}
+
+.navbar{
+    display:flex;
+    align-items: center;
+}
+
+.navbar li{
+    margin-left: 2rem;
+}
+
+.navbar a{
+    color:white;
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: .3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color:var(--main-color);
+}
+
+.menu i{
+    font-size: 2.8rem;
+    cursor: pointer;
+    display: none;
+}
+/*==== header style ends here ====*/
+
+/* ==== section home style starts here ==== */
+section.home{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.home .home-content h3{
+    font-weight: 700;
+    font-size: 2.9rem;
+}
+
+section.home .home-content h1{
+    font-size: 4.9rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+section.home .home-content p{
+    font-size: 1.6rem;
+    margin-top: 1.3rem;
+}
+
+section.home .home-content .social-media a{
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 2rem;
+    color:var(--main-color);
+    width:4rem;
+    height:4rem;
+    margin: 2rem 1.5rem 2rem 0;
+    border-radius: 50%;
+    border: .2rem solid var(--main-color);
+    transition: .3s ease;
+}
+
+section.home .home-content .social-media a:hover{
+    color:var(--second-background-color);
+    background:var(--main-color);
+}
+
+section.home .home-image img{
+    width:39vw;
+    transition: .3s ease;
+}
+
+section.home .home-image img:hover{
+    filter:saturate(1.3);
+}
+/* ==== section home style ends here ==== */
+
+/* ==== section about style starts here ==== */
+section.about{
+    background: var(--second-background-color);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+}
+
+section.about .about-image img{
+    width:25vw;
+    aspect-ratio: 1/1;
+    border-radius: 3rem;
+}
+
+section.about .about-content h1{
+    text-align: left;
+}
+
+section.about .about-content h3{
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+section.about .about-content p{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+/* ==== section about style ends here ==== */
+
+/* ==== section services style starts here ==== */
+section.services .heading{
+    margin-bottom: 2.5rem;
+}
+section.services{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+section.services .services-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+section.services .services-container .service-box{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 30rem;
+    padding:3rem 2rem 4rem;
+    background:var(--second-background-color);
+    border-radius: 2rem;
+    border:.4rem solid var(--background-color);
+    transition:.3s ease;
+}
+
+section.services .services-container .service-box:hover{
+    border:.3rem solid var(--main-color);
+    transform: scale(1.04);
+}
+
+section.services .services-container .service-box i{
+    color:var(--main-color);
+    font-size: 4rem;
+}
+
+section.services .services-container .service-box h3{
+    font-size: 2.6rem;
+}
+
+section.services .services-container .service-box p{
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 1.5;
+}
+/* ==== section services style ends here ==== */
+
+/* ==== section portfolio style starts here ==== */
+section.portfolio{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--second-background-color);
+    margin-bottom: 4rem;
+}
+
+section.portfolio .heading{
+    margin-bottom: 2.5rem;
+}
+
+section.portfolio .portfolio-container{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap:3rem;
+}
+
+section.portfolio .portfolio-container .portfolio-box{
+    display:flex;
+    position: relative;
+    width:30rem;
+    height:25rem;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+section.portfolio .portfolio-container .portfolio-box img{
+    width:100%;
+    border-radius: 2rem;
+}
+
+section.portfolio .portfolio-container .portfolio-box .portfolio-text{
+    position: absolute;
+    top:0;
+    left:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(rgba(0,0,0,.6), var(--main-color));
+    width:100%;
+    height:100%;
+    transition: .5s ease;
+    transform: scale(0);
+    border-radius: 2rem;
+}
+
+section.portfolio .portfolio-container .portfolio-box .portfolio-text h3{
+    font-size: 2.5rem;
+}
+
+section.portfolio .portfolio-container .portfolio-box .portfolio-text p{
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+section.portfolio .portfolio-container .portfolio-box:hover .portfolio-text{
+    transform: scale(1);
+}
+/* ==== section portfolio style ends here ==== */
+
+/* ==== section contact style starts here ==== */
+section.contact{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section.contact .heading{
+    margin-bottom: 2rem;
+}
+
+section.contact form{
+    width:45vw;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+section.contact form .input input,
+section.contact form textarea{
+    background: var(--second-background-color);
+    width:100%;
+    color: var(--text-color);
+    margin-bottom: 1.2rem;
+    padding:1.5rem;
+    border-radius: 2rem;
+    border: .4rem solid var(--background-color);
+    font-size: 1.6rem;
+}
+
+section.contact form .input input{
+    width:49%;
+}
+
+section.contact form .input input::placeholder,
+section.contact form textarea::placeholder{
+    font-size: 1.6rem;
+    color:var(--text-color);
+}
+
+section.contact form textarea{
+    resize: none;
+    padding-bottom: 6rem;
+}
+
+/* ==== section contact style ends here ==== */
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-background-color);
+}
+
+footer .footer-text p{
+    font-size: 1.6rem;
+}
+
+footer a i{
+    padding: .7rem;
+    background: var(--main-color);
+    font-size: 2.5rem;
+    color: var(--second-background-color);
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+footer a i:hover{
+    box-shadow: 0 0 2rem var(--main-color);
+}
+
+/* ==== mediaquery starts here ==== */
+@media screen and (max-width:1200px) {
+    section.home .home-image img{
+        width:45vw;
+    }
+
+    section.about .about-image img{
+        width:30vw;
+    }
+
+}
+
+@media screen and (max-width:989px) {
+    html{
+        font-size: 55%;
+    }
+
+    section.home .home-image img{
+        width: 45vw;
+    }
+
+    section.about .about-image img{
+        width: 32vw;
+    }
+}
+
+@media screen and (max-width:860px) {
+    .header{
+        padding:2rem 3%;
+    }
+
+    .header a.logo{
+        font-size: 3.2rem;
+    }
+
+    .header .navbar li a{
+        font-size: 1.8rem;
+    }
+
+    section{
+        padding:13rem 3% 8rem;
+    }
+
+    section.home{
+        flex-direction: column-reverse;
+    }
+
+    section.home .home-image img{
+        width: 55vw;
+    }
+
+    section.about{
+        flex-direction: column-reverse;
+    }
+
+    section.about .about-image img{
+        width: 42vw;
+    }
+    
+    section.portfolio .portfolio-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section.contact form{
+        width: 70vw;
+    }
+
+    footer{
+        padding:2rem 3%;
+    }
+}
+
+@media screen and (max-width:646px) {
+    .header .menu i{
+        display:block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        left:0;
+        width: 100%;
+        display: none;
+        z-index: -100;
+        background: var(--background-color);
+        padding: 3rem 0;
+        border-bottom: .4rem solid var(--second-background-color);
+    }
+    
+    .header li{
+        margin-bottom: 1.5rem;
+    }
+
+    .header .navbar li a{
+        font-size: 2.2rem;
+    }
+
+    .header .navbar.active{
+        display: block;
+    }
+
+    section.home .home-image img{
+        width: 65vw;
+    }
+
+    section.about .about-image img{
+        width:52vw;
+    }
+
+    section.contact form .input input{
+        width:100%;
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    html{
+        font-size: 52%;
+    }
+
+    section.home .home-image img{
+        width: 90vw;
+    }
+
+    section.about .about-image img{
+        width:70vw;
+    }
+
+    section.portfolio .portfolio-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    section.portfolio .portfolio-container .portfolio-box{
+        width:85vw;
+        height: 35rem;
+    }
+
+    section.portfolio .portfolio-container .portfolio-box .portfolio-text h3{
+        font-size: 2.9rem;
+    }
+
+    section.portfolio .portfolio-container .portfolio-box .portfolio-text p{
+        font-size: 2.2rem;
+    }
+
+    section.contact form{
+        width: 80vw;
+    }
+}
+
+/* ==== mediaquery ends here ==== */
